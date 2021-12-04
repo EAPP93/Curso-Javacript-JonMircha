@@ -2,7 +2,7 @@ html{
     scroll-behavior: smooth;
 }
 
-*,h1,h2,a,body{
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -22,6 +22,8 @@ html{
     align-items: center;
 }
 
+/************************************* Header ***********************************************/
+
 header{
     background-color: var(--primary-background-color);
     width: 100%;
@@ -29,6 +31,8 @@ header{
     position: sticky;
     top: 0;
 }
+
+/********************************* Nav Toggle menu ******************************************/
 
 .toggle-menu{
     background-color: var(--secundary-background-color);
@@ -66,14 +70,18 @@ header{
     transform: translateX(0%);
 }
 
+/************************************** Main **********************************************/
+
 main section{
     height: 100vh;
     padding-top: 7vh;
 }
 
 main section [id]{
-    scroll-margin-top: 7vh;
+    scroll-margin-top: 10vh;
 }
+
+/********************************* Hamburger menu ******************************************/
 
 .hamburger-menu{
     z-index: 3;
