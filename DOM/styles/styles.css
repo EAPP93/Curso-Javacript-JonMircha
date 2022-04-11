@@ -24,7 +24,7 @@ html{
 
 /************************************* Header ***********************************************/
 
-header{
+.header{
     background-color: var(--primary-background-color);
     width: 100%;
     height: 7vh;
@@ -38,13 +38,14 @@ header{
     background-color: var(--secundary-background-color);
     opacity: 0.8;
     z-index: 2;
-    position: fixed;
+    position: fixed; 
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     transition: all 500ms ease-in-out;
     transform: translateX(-100%);
+    visibility: hidden;
 }
 
 .toggle-menu ul li{
@@ -68,17 +69,45 @@ header{
 
 .active{
     transform: translateX(0%);
+    visibility: visible;
 }
 
-/************************************** Main **********************************************/
+/************************************** Main **************************************************/
 
-main section{
+.main .sections{
+    width: 100%;
     height: 100vh;
     padding-top: 7vh;
+    text-align: center;
 }
 
-main section [id]{
+.main .sections [id]{
     scroll-margin-top: 10vh;
+    margin-bottom: 1em;
+}
+
+/************************************** Articles **************************************************/
+
+.main .sections .articles{
+    background-color: lightyellow;
+    width: 90%;
+    margin: 0 5%;
+    padding: 1% 0.5%;
+}
+
+/* clock and reloj */
+
+.main .sections .articles .articles-main #clock-alarm{
+    margin: 0.5% auto;
+    background-color: blue;
+    width: 10px;
+    height: 10px;
+}
+
+.main .sections .articles .articles-main .clock-alarm-btn input{
+    padding: 0.5%;
+    margin: 0.5% 0.2%;
+    border-radius: 5px;
 }
 
 /********************************* Hamburger menu ******************************************/
@@ -92,7 +121,6 @@ main section [id]{
     right: 1rem;
     bottom: 1rem;
     border-radius: 50%;
-    padding: 1.5em 0;
 }
 
 .hamburger-menu span{
@@ -100,14 +128,13 @@ main section [id]{
     display: block;
     width: 50%;
     height: 10%;
-    border-radius: 5px;
+    border-radius: 50px;
     transition: all 1s ease-in-out;
-    margin: 0.25em 0;
-    padding: 0.2em 0;
+    margin: 2.5% 0;
 }
 
 .hamburger-menu.efect span{
-    margin: -0.18em 0;
+    margin: -4.82% 0;
 }
 
 .hamburger-menu.efect span:nth-child(1){
